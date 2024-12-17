@@ -1,8 +1,12 @@
-import Routes from './routes';
+import Routes from '@/routes';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '@/i18n/i18n';
 function App() {
   return (
     <>
-      <Routes />
+      <I18nextProvider i18n={i18n}>
+        <Routes />
+      </I18nextProvider>
     </>
   )
 }
